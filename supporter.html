@@ -212,7 +212,7 @@
                 if (rows && rows.length > 0) {
                     const grid = document.getElementById('supporters-grid');
                     rows.forEach(row => {
-                        const [name, role, imageUrl, joinDate, level] = row;
+                        const [name, role, imageUrl, ExpDate, level] = row;
                         const card = document.createElement('div');
                         card.className = 'card';
                         card.style.setProperty('--card-img', `url('${imageUrl}')`);
@@ -223,9 +223,8 @@
                                 <div class="branch">${role}</div>
                             </div>
                             <div class="overlay">
-                                <p>เข้าร่วมเมื่อ ${joinDate}</p>
-                                <p>คุณกลายเป็น ดาวดวงน้อย Lv.${level} <br>ในจักรวาลของเอลลี่แล้ว 🌌</p>
-                                <p>ขอบคุณที่อยู่ข้างกันนะคะ ♡</p>
+                                <p>วันหมดอายุ:${ExpDate}</p>
+                                <p>ต้องการต่ออายุซัพพอร์ตเตอร์ติดต่อที่ดิสได้เลยค่ะ ♡</p>
                             </div>
                         `;
 
@@ -242,4 +241,5 @@
 </body>
 
 </html>
+
 
